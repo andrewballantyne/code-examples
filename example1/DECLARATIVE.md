@@ -2,7 +2,7 @@
 
 Declaring the entirety of environment help into its own hook, we have simplified this page down to a very simple rendering. When reading code you didn't write (or wrote a long time ago) this type of breakdown allows the reader to rationalize out the page extremely quickly.
 
-`useEnvironmentHelp` will either return ac component, or not. The internal managing of onClicks, talking to localStorage, etc... this is all simplified down to a single call -- as far as the section is concerned.
+`useEnvironmentHelp` will either return a component, or not. The internal managing of onClicks, talking to localStorage, etc... this is all simplified down to a single call -- as far as the section is concerned.
 
 ## Our Original Component
 
