@@ -1,5 +1,9 @@
 # Example 1
 
+A component handling internal logic all in one spot. We want to show an Alert that can be dismissed, and we want to make sure it's stored in localstorage (the `hasEnvHelp` & `disableEnvHelp` functions below).
+
+This seems pretty straight forward... this is a section on a page, so we have already broken it down a notch; why go further?
+
 ### [Declarative Design Example](./DECLARATIVE.md)
 
 ## Sample Code
@@ -44,7 +48,6 @@ const EnvironmentsSection: React.FC = () => {
       </StackItem>
       {!hideHelp && <StackItem>{environmentHelp}</StackItem>}
       <StackItem>
-        {/* eslint-disable-next-line no-alert */}
         <Button variant="primary" onClick={() => handleAddEnvironment()}>
           Create environment
         </Button>
