@@ -1,8 +1,8 @@
 # Example 2
 
-Form page -- using Formik (would be much more verbose without Formik).
+Form pages are often very verbose in React. Using hooks usually ends up with one hook per field, with additional hooks for error states and any number of validation callbacks. Using Formik (as shown here) automatically reduces a lot of that down and breaks it apart to be more declarative while handling some boilerplate stuff.
 
-This works to showcase how forms in React can get quite rough
+This example showcases how you can take an already Formik powered form and make it more declarative and straight forward to consume.
 
 ### [Declarative Design Example](./DECLARATIVE.md)
 
