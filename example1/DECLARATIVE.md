@@ -2,7 +2,7 @@
 
 Declaring the entirety of environment help into its own hook, we have simplified this page down to a very simple rendering. When reading code you didn't write (or wrote a long time ago) this type of breakdown allows the reader to rationalize out the page extremely quickly.
 
-`useEnvironmentHelp` will either return a component, or not. The internal managing of onClicks, talking to localStorage, etc... this is all simplified down to a single call -- as far as the section is concerned.
+`useEnvironmentHelpAlert` will either return a component, or not. The internal managing of onClicks, talking to localStorage, etc... this is all simplified down to a single call -- as far as the section is concerned.
 
 ## Our Original Component
 
@@ -11,10 +11,10 @@ import * as React from 'react';
 import { Button, Stack, StackItem, Title } from '@patternfly/react-core';
 import { handleAddEnvironment } from './actions';
 import EnvironmentCards from './EnvironmentCards';
-import useEnvironmentHelp from './useEnvironmentHelp';
+import useEnvironmentHelpAlert from './useEnvironmentHelpAlert';
 
 const EnvironmentsSection: React.FC = () => {
-  const environmentHelp = useEnvironmentHelp();
+  const environmentHelp = useEnvironmentHelpAlert();
 
   return (
     <Stack hasGutter>
@@ -56,7 +56,7 @@ const disableEnvHelp = (): void => {
   localStorage.setItem(hideEnvHelpKey, 'true');
 };
 
-const useEnvironmentHelp = (): React.ReactNode | null => {
+const useEnvironmentHelpAlert = (): React.ReactNode | null => {
   const [hideHelp, setHideInfo] = React.useState(hasEnvHelp());
 
   const disableHelp = () => {
@@ -85,5 +85,5 @@ const useEnvironmentHelp = (): React.ReactNode | null => {
   return hideHelp ? null : environmentHelp;
 };
 
-export default useEnvironmentHelp;
+export default useEnvironmentHelpAlert;
 ```
