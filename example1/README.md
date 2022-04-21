@@ -4,7 +4,7 @@
 
 ## Sample Code
 
-```tsx
+```typescript jsx
 import * as React from 'react';
 import { Alert, AlertActionCloseButton, Button, Stack, StackItem, Title } from '@patternfly/react-core';
 import { handleAddEnvironment } from './actions';
