@@ -1,0 +1,60 @@
+# Example 1
+
+### [Declarative Design Example](./DECLARATIVE.md)
+
+## Sample Code
+
+```tsx
+import * as React from 'react';
+import { Alert, AlertActionCloseButton, Button, Stack, StackItem, Title } from '@patternfly/react-core';
+import { handleAddEnvironment } from './actions';
+import { hasEnvHelp, disableEnvHelp } from './localStorage';
+import EnvironmentCards from './EnvironmentCards';
+
+const EnvironmentsSection: React.FC = () => {
+  const [hideHelp, setHideInfo] = React.useState(hasEnvHelp());
+
+  const disableHelp = () => {
+    setHideInfo(false);
+    disableEnvHelp();
+  };
+
+  const environmentHelp = (
+    <Alert
+      title="About environments"
+      isInline
+      variant="info"
+      actionClose={<AlertActionCloseButton onClose={disableHelp} />}
+      actionLinks={
+        <Button variant="secondary" onClick={disableHelp}>
+          Got it, thanks!
+        </Button>
+      }
+    >
+      Manage your continuous delivery process for your applications via environments. What&apos;s an
+      &ldquo;environment&rdquo;? It&apos;s an abstraction of infrastructure. With environments,
+      define a continuous delivery order and manage application components between them.
+    </Alert>
+  );
+
+  return (
+    <Stack hasGutter>
+      <StackItem>
+        <Title headingLevel="h2">Environments</Title>
+      </StackItem>
+      {!hideHelp && <StackItem>{environmentHelp}</StackItem>}
+      <StackItem>
+        {/* eslint-disable-next-line no-alert */}
+        <Button variant="primary" onClick={() => handleAddEnvironment()}>
+          Create environment
+        </Button>
+      </StackItem>
+      <StackItem>
+        <EnvironmentCards />
+      </StackItem>
+    </Stack>
+  );
+};
+
+export default EnvironmentsSection;
+```
