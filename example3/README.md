@@ -78,6 +78,8 @@ const DropdownWithSwitch: React.FC<DropdownWithSwitchProps> = (props) => {
   React.useEffect(() => {
     console.debug('DropdownWithSwitch mounted');
   }, [])
+  // Let us get a random value to show case closures
+  // eg. 0.000 << a random number between 0 and 1, as a string, 5 characters
   const rnd = Math.random().toString().slice(0, 5);
   console.debug('Random Number:', rnd);
 
