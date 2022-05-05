@@ -21,6 +21,7 @@ const DropdownWithSwitch: React.FC<DropdownWithSwitchProps> = (props) => {
   return (
     <DropdownWithSwitchToggle
       // ...
+      isOpen={isOpen}
       onToggle={(v) => {
         setOpen(v);
       }}
@@ -33,6 +34,7 @@ const DropdownWithSwitch: React.FC<DropdownWithSwitchProps> = (props) => {
 // ...
 const DropdownWithSwitchToggle: React.FC<DropdownWithSwitchToggleProps> = ({
   // ...
+  isOpen,
   onToggle,
 }) => {
   const handleMenuClick = (event: MouseEvent) => {
@@ -82,6 +84,7 @@ const DropdownWithSwitch: React.FC<DropdownWithSwitchProps> = (props) => {
   return (
     <DropdownWithSwitchToggle
       // ...
+      isOpen={isOpen}
       onToggle={(v) => {
         setOpen(v);
         console.debug('OnToggle Random Number Printout!', rnd);
@@ -95,6 +98,7 @@ const DropdownWithSwitch: React.FC<DropdownWithSwitchProps> = (props) => {
 // ...
 const DropdownWithSwitchToggle: React.FC<DropdownWithSwitchToggleProps> = ({
   // ...
+  isOpen,
   onToggle,
 }) => {
   console.debug('DropdownWithSwitchToggle rendered');
@@ -193,6 +197,7 @@ const DropdownWithSwitch: React.FC<DropdownWithSwitchProps> = (props) => {
   return (
     <DropdownWithSwitchToggle
       // ...
+      isOpen={isOpen}
       onToggle={onToggle}
     />
   );
@@ -203,6 +208,7 @@ const DropdownWithSwitch: React.FC<DropdownWithSwitchProps> = (props) => {
 // ...
 const DropdownWithSwitchToggle: React.FC<DropdownWithSwitchToggleProps> = ({
   // ...
+  isOpen,
   onToggle,
 }) => {
   React.useEffect(() => {
