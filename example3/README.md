@@ -157,7 +157,10 @@ DropdownWithSwitchToggle rendered
 // Callback handled (we clicked on the toggle)
 manual click
 OnToggle Random Number Printout! 0.305
+```
+So far so good! We are getting a random number and we are rendering it back on click! But we haven't triggered our window callback yet -- let us continue looking at more logs...
 
+```text
 // Render Cycle 3 (we set data, so new render)
 DropdownWithSwitch rendered
 Random Number: 0.694
