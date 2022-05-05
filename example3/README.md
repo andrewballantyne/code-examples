@@ -175,7 +175,7 @@ OnToggle Random Number Printout! 0.492
 
 ## The Issue Explained
 
-The lack of a dependency array can bite you in the nub in the long run... The current implementation will likely not have a problem with this due to some magic in the way React handles `useState`.
+The lack of a dependency array can bite you in the butt in the long run... The current implementation will likely not have a problem with this due to some magic in the way React handles `useState`.
 
 The `handleMenuClick` handler is connected to the window object at time of the first `useEffect` hook fire -- which is the instance (memory reference) of the handler at mount time. The handler uses `onToggle`, which is also the instance at mount time. The current setup is unlikely to be a problem -- since the current inline `onToggle` only invokes the `setOpen` (from `useState`) which never changes memory reference during the lifecycle of the component.
 
