@@ -8,3 +8,7 @@ This repo is to showcase some coding examples over different types of programmin
 
 - [Example 1](./example1/README.md) - Using Hooks to simplifying reading
 - [Example 2](./example2/README.md) - Form pages, decomposed
+
+## JavaScript Closures w/ React
+
+- [Example 3](./example3/README.md) - Stale function reference
