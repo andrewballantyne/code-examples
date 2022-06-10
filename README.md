@@ -1,3 +1,8 @@
+# [A Link to a folder, not a file](./markdown/links)
+
+
+
+
 # Code Examples
 
 This repo is to showcase some coding examples over different types of programming paradigms.  
