@@ -12,3 +12,5 @@ This repo is to showcase some coding examples over different types of programmin
 ## JavaScript Closures w/ React
 
 - [Example 3](./example3/README.md) - Stale function reference
+
+[test](./example3)
